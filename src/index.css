@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind forms;
+@layer components {
+  .input {
+    @apply form-input px-2 py-1 rounded-md bg-blue-50 placeholder-gray-500 placeholder-opacity-75 w-full;
+  }
+  .nav-ul {
+    @apply inline-grid grid-cols-1 md:grid-cols-3 gap-x-4 place-items-stretch border-b
+  }
+  .nav-link {
+    @apply text-blue-900 hover:text-blue-500 text-xl;
+  }
+  .nav-li {
+    @apply mr-1 mt-1 hover:bg-blue-100;
+  }
+  .btn {
+    @apply h-7 rounded ring-2 mt-2.5;
+  }
+  .btn-submit {
+    @apply bg-blue-200 text-indigo-900;
+  }
+  .post-wrapper {
+    @apply inline-grid grid-cols-1 md:grid-cols-3 gap-x-4 place-items-stretch
+  }
+  .card {
+    @apply shadow-md rounded-md mt-8 bg-blue-100
+  }
+  .card-visit {
+    @apply shadow-md rounded-md mt-8 bg-red-100
+  }
+  .card-visit-header {
+    @apply grid p-2 h-auto lg:h-16 rounded-md bg-red-200 grid-cols-12
+  }
+  .card-header {
+    @apply grid p-2 h-auto lg:h-16 rounded-md bg-blue-300 grid-cols-12
+  }
+}
